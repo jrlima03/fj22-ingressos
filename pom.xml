@@ -149,5 +149,11 @@
             </plugin>
         </plugins>
     </build>
+<developers>
+	<developer>
+		<name>José Roberto</name>
+		<email>juninho_lima2020@hotmail.com</email>
+	</developer>
+</developers>
 
 </project>
