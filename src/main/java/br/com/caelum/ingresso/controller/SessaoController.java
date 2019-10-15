@@ -31,7 +31,7 @@ public class SessaoController {
 	private SessaoDao sessaoDao;
 
 	@GetMapping("/admin/sessao")
-	public ModelAndView form(@RequestParam("SalaId") Integer SalaId, SessaoForm form) {
+	public ModelAndView form(@RequestParam("salaId") Integer SalaId, SessaoForm form) {
 
 		ModelAndView mav = new ModelAndView("sessao/sessao");
 
@@ -51,6 +51,6 @@ public class SessaoController {
 		
 		sessaoDao.save(sessao);
 		
-		return new ModelAndView("redirect:/admin/sala/" + form.getSalaId() + "/sesoes");
+		return new ModelAndView("redirect:/admin/sala/" + form.getSalaId() + "/sessoes");
 	}
 }
