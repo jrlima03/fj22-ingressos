@@ -31,7 +31,7 @@ public class Sala {
 
     }
 
-    public Sala(String nome, BigDecimal bigDecimal) {
+    public Sala(String nome, BigDecimal preco) {
         this.nome = nome;
         this.preco = preco;
     }

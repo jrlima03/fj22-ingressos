@@ -66,7 +66,7 @@ public class SalaForm {
     }
 
     public Sala toSala() {
-        Sala sala = new Sala(this.nome);
+        Sala sala = new Sala(this.nome, preco);
         sala.setId(this.salaId);
         sala.setLugares(new HashSet<>(this.lugares));
         sala.setPreco(this.preco);
