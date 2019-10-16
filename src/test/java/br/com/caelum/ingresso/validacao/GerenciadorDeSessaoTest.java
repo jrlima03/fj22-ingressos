@@ -6,15 +6,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.mysql.fabric.xmlrpc.base.Array;
 
 import br.com.caelum.ingresso.model.Filme;
 import br.com.caelum.ingresso.model.Sala;
 import br.com.caelum.ingresso.model.Sessao;
-import junit.framework.Assert;
+
 
 public class GerenciadorDeSessaoTest {
 	
