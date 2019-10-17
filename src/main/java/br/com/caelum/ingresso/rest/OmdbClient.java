@@ -11,8 +11,9 @@ import br.com.caelum.ingresso.model.Filme;
 
 @Component
 public class OmdbClient {
-
-	public Optional<DetalhesDoFilme> resquest(Filme filme) {
+//Metodo Generico para pegar várias informações dependendo apenas das classes encontradas no pacote .ingresso.model :D
+	//C ta vuando zézão
+	public <MetodoGenerico> Optional<MetodoGenerico> resquest(Filme filme, Class<MetodoGenerico> tClass) {
 
 		RestTemplate client = new RestTemplate();
 
@@ -21,11 +22,18 @@ public class OmdbClient {
 		String url = String.format("https://omdb-fj22.herokuapp.com/movie?title=%s", titulo);
 
 		try {
-			DetalhesDoFilme detalhesDoFilme = client.getForObject(url, DetalhesDoFilme.class);
-			return Optional.ofNullable(detalhesDoFilme);
-
+			return Optional.of(client.getForObject(url, tClass));
 		} catch (RestClientException e) {
 			return Optional.empty();
 		}
+		
+		//Pega somente uma coisa por vez :D
+//		try {
+//			DetalhesDoFilme detalhesDoFilme = client.getForObject(url, DetalhesDoFilme.class);
+//			return Optional.ofNullable(detalhesDoFilme);
+//
+//		} catch (RestClientException e) {
+//			return Optional.empty();
+//		}
 	}
 }
